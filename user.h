@@ -1,10 +1,14 @@
-#ifndef GRADING_H
-#define GRADING_H
+#ifndef USER_H
+#define USER_H
 
-#include "user.h"
+#define TOTAL_Q 10
 
-float calcPercentage(int score, int total);
-char calcGrade(float percent);
-void displayResult(struct Student s, int score, float percent, char grade);
+struct Student {
+    char name[100];
+    int roll;
+    char answers[TOTAL_Q];
+};
 
-#endif // GRADING_H
+void inputStudentData(struct Student *s);
+
+#endif
